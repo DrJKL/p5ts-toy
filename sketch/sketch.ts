@@ -24,7 +24,12 @@ const sketch = (p: p5) => {
     // CLEAR BACKGROUND
     p.background(0, 10);
 
-    // CENTER OF SCREEN
+    if(!fixed) {
+      const newFocus = p.createVector(0,0);
+      p5.Vector.lerp(focus, p.createVector(p.mouseX, p.mouseY), 0.5, newFocus)
+      focus = newFocus;
+    }
+
     p.translate(focus.x, focus.y);
 
     const numberOfShapes = <number>numberOfShapesControl.value();
@@ -50,11 +55,6 @@ const sketch = (p: p5) => {
   p.mouseClicked = () => {
     fixed = !fixed;
   };
-  p.mouseMoved = () => {
-    if (!fixed) {
-      focus = p.createVector(p.mouseX, p.mouseY);
-    }
-  };
   p.mouseWheel = (event: WheelEvent) => {
     console.log(event);
     numberOfShapesControl.value(+numberOfShapesControl.value() + event.deltaY/100);
@@ -63,8 +63,13 @@ const sketch = (p: p5) => {
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
   };
+  p.keyPressed = () => {
+    switch (p.key) {
+      case ' ':
+        p.background(0);
+        break;
+    }
+  }
 };
 
-export const thing = new p5(sketch);
-
-console.log("in sketch.ts");
+export const sketchInstance = new p5(sketch);
