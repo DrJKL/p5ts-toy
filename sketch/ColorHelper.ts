@@ -1,4 +1,4 @@
-class ColorHelper {
+export class ColorHelper {
     private static getColorVector(c: p5.Color) {
         return createVector(
             red(c),

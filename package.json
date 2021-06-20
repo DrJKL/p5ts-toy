@@ -1,18 +1,31 @@
 {
-  "name": "p5-typescript-starter",
+  "name": "p5ts-toy",
   "version": "1.0.0",
   "description": "Project to quickly get something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p start-compile start-run",
+    "start-old": "run-p start-compile start-run",
     "start-compile": "tsc --watch",
-    "start-run": "browser-sync start --server -w"
+    "start-run": "browser-sync start --server -w",
+    "start": "parcel serve index.html",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url /p5ts-toy/",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "homepage": "https://github.com/Gaweph/p5-typescript-starter#readme",
   "devDependencies": {
-    "@types/p5": "^0.9.0",
-    "browser-sync": "^2.26.12",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/p5": "^0.9.1",
+    "browser-sync": "^2.26.14",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.2",
     "npm-run-all": "^4.1.5",
-    "typescript": "^3.8.3"
+    "parcel": "^2.0.0-beta.3.1",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.1",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "babel-types": "^6.26.0"
   }
 }

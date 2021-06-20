@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
     "mapRoot": "./sketch/",
-    "module": "none",
+    "module": "ESNext",
     "noImplicitAny": true,
-    "outFile": "./build/build.js",
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": "./sketch/",

@@ -1,4 +1,4 @@
-class PolygonHelper {
+export class PolygonHelper {
   public static draw(numberOfSides: number, width: number) {
     push();    
         const angle = TWO_PI / numberOfSides;
