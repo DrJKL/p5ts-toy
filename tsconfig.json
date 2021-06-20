@@ -3,6 +3,8 @@
     "mapRoot": "./sketch/",
     "module": "ESNext",
     "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strict": true,
     "preserveConstEnums": true,
     "removeComments": true,
     "rootDir": "./sketch/",

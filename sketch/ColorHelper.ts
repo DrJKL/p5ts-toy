@@ -21,7 +21,7 @@ export class ColorHelper {
         ];
     }
 
-    public static getColorsArray(total: number, baseColorArray: p5.Color[] = null, p: p5): p5.Color[] {
+    public static getColorsArray(total: number, baseColorArray: p5.Color[]|null = null, p: p5): p5.Color[] {
 
         if (baseColorArray == null) {
             baseColorArray = ColorHelper.rainbowColorBase(p);
