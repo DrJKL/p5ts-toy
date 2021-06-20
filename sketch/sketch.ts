@@ -22,7 +22,7 @@ const sketch = (p: p5) => {
   };
   p.draw = () => {
     // CLEAR BACKGROUND
-    p.background(0, 50);
+    p.background(0, 10);
 
     // CENTER OF SCREEN
     p.translate(focus.x, focus.y);
