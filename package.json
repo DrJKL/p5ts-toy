@@ -9,7 +9,6 @@
     "start-run": "browser-sync start --server -w",
     "start": "parcel serve index.html",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url /p5ts-toy/ -d docs",
-    "deploy": "npm run build && gh-pages -d dist"
   },
   "homepage": "https://github.com/DrJKL/p5ts-toy#readme",
   "devDependencies": {
