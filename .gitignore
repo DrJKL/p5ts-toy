@@ -3,4 +3,5 @@ node_modules/*
 .vscode/
 **/*.js
 **/*.js.map
+!docs/*
 !build/build.js
