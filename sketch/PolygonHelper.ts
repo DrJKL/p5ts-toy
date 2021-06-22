@@ -1,7 +1,7 @@
 import p5 from "p5";
 
 export class PolygonHelper {
-  public static draw(numberOfSides: number, width: number, p?: p5) {
+  public static draw(numberOfSides: number, width: number, p: p5) {
     p.push();    
         const angle = p.TWO_PI / numberOfSides;
         const radius = width / 2;
